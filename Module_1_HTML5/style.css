@@ -1,0 +1,464 @@
+/* ========================================================== */
+/* HTML5 Portal Base Stylesheet                              */
+/* ========================================================== */
+
+/* Typography & General Defaults */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #212529;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+}
+
+/* Header & Navigation Styles */
+header {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#mainNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#mainNav a {
+    color: #ced4da;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+#mainNav a:hover {
+    color: #ffffff;
+}
+
+#mainNav a.help-btn {
+    background-color: #0d6efd;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#mainNav a.help-btn:hover {
+    background-color: #0b5ed7;
+}
+
+/* Main Container Layout */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #212529;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    font-size: 1.75rem;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #495057;
+}
+
+/* Gallery and Table Styles (Task 4) */
+.event-gallery-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+    margin-top: 20px;
+}
+
+.event-gallery-table caption {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #6c757d;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.gallery-card {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Custom class applied for borders on image tags (Task 4) */
+.gallery-img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+    border: 3px solid #ced4da;
+    border-radius: 6px;
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.gallery-img:hover {
+    border-color: #0d6efd;
+}
+
+.event-caption {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+/* Registration Form (Task 5) */
+#registrationForm {
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+/* Dynamic outline style showing focus state (Task 8 comparison hint) */
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #0d6efd;
+    outline: 2px solid rgba(13, 110, 253, 0.25);
+}
+
+.fee-display-box {
+    background-color: #e8f4fd;
+    border-left: 4px solid #0d6efd;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 0 4px 4px 0;
+    font-size: 1rem;
+    color: #084298;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    background-color: #0d6efd;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+button.secondary-btn {
+    background-color: #6c757d;
+}
+
+button.secondary-btn:hover {
+    background-color: #5c636a;
+}
+
+.output-container {
+    margin-top: 20px;
+}
+
+#confirmationMessage {
+    display: block;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+#confirmationMessage.success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+/* Feedback Styling (Task 6) */
+.feedback-card {
+    max-width: 600px;
+    border: 1px solid #e9ecef;
+    padding: 20px;
+    border-radius: 6px;
+    background: #f8f9fa;
+}
+
+.validation-msg {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+.validation-msg.valid {
+    color: #198754;
+}
+
+.validation-msg.invalid {
+    color: #dc3545;
+}
+
+.counter-box {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+#feedbackOutput {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* Video & Media Layout (Task 7) */
+.video-wrapper {
+    max-width: 720px;
+    margin: 20px 0;
+    background-color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.status-alert {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-top: 1px solid #ffeeba;
+    font-weight: 500;
+    text-align: center;
+}
+
+.status-alert.ready {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-top-color: #badbcc;
+}
+
+/* Geolocation Component (Task 9) */
+.geolocation-box {
+    max-width: 600px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.location-results {
+    margin-top: 15px;
+    background: #ffffff;
+    border: 1px solid #badbcc;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.location-results ul {
+    margin: 10px 0 15px 0;
+    padding-left: 20px;
+}
+
+.location-error {
+    margin-top: 15px;
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* Debugging guide section formatting (Task 10) */
+.debug-list {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.debug-list li {
+    margin-bottom: 12px;
+}
+
+kbd {
+    background: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.console-box-demo {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.badge.active {
+    background-color: #198754;
+}
+
+/* Footer layout */
+footer {
+    background-color: #212529;
+    color: #868e96;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #343a40;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Modal Overlay Style (Task 6 double click enlarge) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-wrapper {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    text-align: center;
+}
+
+.modal-content-img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 8px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+.modal-caption-text {
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}

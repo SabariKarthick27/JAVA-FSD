@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Local Community Event Portal</title>
+    
+    <!-- Task 1: Link to external stylesheet styles.css -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Task 1: Use an embedded <style> tag in the <head> to define body background parameters -->
+    <style>
+        /* Fallback properties and custom base styles for body load */
+        body {
+            /* Fallback color if the main gradient/image is slow to load */
+            background-color: #0b0f19;
+        }
+        
+        /* Task 3: Demonstration of an inline override and helper selector */
+        .inline-override-guide {
+            border-left: 3px solid #ff3b30;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- Navigation & Header (Task 3 ID selector)   -->
+    <!-- ========================================== -->
+    <header id="mainHeader">
+        <div class="header-container">
+            <div class="logo">CityLink CSS3</div>
+            <!-- Task 6: Nav menus using unstyled lists adjusted with spacing -->
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#welcome">Home</a></li>
+                    <li><a href="#gallery">Featured</a></li>
+                    <li><a href="#table">Schedules</a></li>
+                    <li><a href="#registration">Register</a></li>
+                    <li><a href="#newsletter">Bulletin</a></li>
+                    <li><a href="#sandbox">Layout Lab</a></li>
+                    <li><a href="help.html" target="_blank" class="cta-button">Help Guide ↗</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- Main Content Container                     -->
+    <!-- ========================================== -->
+    <main>
+        
+        <!-- Section 1: Welcome & Overview -->
+        <section id="welcome" class="section-card">
+            <!-- Task 1: Apply an inline style to make one heading red -->
+            <h1 style="color: #ef4444; font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 15px;">
+                Day 1 College Design Laboratory
+            </h1>
+            
+            <h2 class="gradient-header">Styling the Local Community Event Portal</h2>
+            <p class="highlight-lead">
+                Welcome to the upgraded CSS3 edition of the <span class="highlight">CityLink Event Portal</span>. This version demonstrates responsive grid layers, advanced element selections, custom typography matrices, and box-model visualization dashboards.
+            </p>
+            <p>
+                Our community system represents a state-of-the-art implementation of stylesheet layouts, specifically built to look stunning across desktop monitors, tablets, and smartphones.
+            </p>
+        </section>
+
+        <!-- Section 2: CSS3 Grid Event Cards (Task 3, 4, 5, 8) -->
+        <section id="gallery" class="section-card">
+            <h2 class="gradient-header">Featured Neighborhood Events</h2>
+            <p>Our upcoming curriculum offers engaging sessions in three highly requested neighborhood branches. Hover over each card to experience smooth CSS3 transitions!</p>
+            
+            <!-- Grid Container mapping Task 10 layout specs -->
+            <div class="events-grid">
+                
+                <!-- Event Card 1: Coding Bootcamp (Task 3, 4, 8) -->
+                <article class="eventCard">
+                    <div>
+                        <div class="event-card-img-wrapper">
+                            <img src="assets/event1.svg" class="event-card-img" alt="Coding gears graphic" id="img-tech">
+                        </div>
+                        <h3>1. Coding Bootcamp</h3>
+                        <p class="event-card-desc">
+                            Dive deep into modern front-end architectures. Residents are invited to learn the principles of semantic layout grids, flex containers, and standard dev testing workflows.
+                        </p>
+                    </div>
+                    <div class="event-card-meta">
+                        <span class="event-fee-badge">$25.00</span>
+                        <a href="#registration" class="cta-button" onclick="selectEvent('tech')">Book Spot</a>
+                    </div>
+                </article>
+
+                <!-- Event Card 2: Acoustic Concert (Task 3, 4, 8) -->
+                <article class="eventCard">
+                    <div>
+                        <div class="event-card-img-wrapper">
+                            <img src="assets/event2.svg" class="event-card-img" alt="Acoustic music notes graphic" id="img-music">
+                        </div>
+                        <h3>2. Acoustic Concert</h3>
+                        <p class="event-card-desc">
+                            Relax under the evening stars at the municipal park amphitheater. This weekly gathering showcases outstanding performances from regional singer-songwriters and acoustic ensembles.
+                        </p>
+                    </div>
+                    <div class="event-card-meta">
+                        <span class="event-fee-badge">$15.00</span>
+                        <a href="#registration" class="cta-button" onclick="selectEvent('music')">Book Spot</a>
+                    </div>
+                </article>
+
+                <!-- Event Card 3: Pottery Class (Task 3, 4, 8) -->
+                <article class="eventCard">
+                    <div>
+                        <div class="event-card-img-wrapper">
+                            <img src="assets/event3.svg" class="event-card-img" alt="Pottery wheel graphic" id="img-art">
+                        </div>
+                        <h3>3. Art Pottery Class</h3>
+                        <p class="event-card-desc">
+                            Discover the therapeutic artistry of clay-modeling. Learn from professional potters how to mold, spin, glaze, and bake custom pottery vases, plates, and ornamental mugs.
+                        </p>
+                    </div>
+                    <div class="event-card-meta">
+                        <span class="event-fee-badge">$20.00</span>
+                        <a href="#registration" class="cta-button" onclick="selectEvent('art')">Book Spot</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Advanced Schedules Table (Task 7) -->
+        <section id="table" class="section-card">
+            <h2 class="gradient-header">Official Schedule & Registrar Metrics</h2>
+            <p>Below is the complete enrollment timetable for the current calendar cycle. The dataset is organized inside a custom-collapsed, zebra-striped CSS3 data structure.</p>
+            
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Program ID</th>
+                            <th>Event Title</th>
+                            <th>Target Date</th>
+                            <th>Assigned Instructor</th>
+                            <th>Availability Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#EL-TECH01</td>
+                            <td>Coding Bootcamp</td>
+                            <td>May 28, 2026</td>
+                            <td>Prof. Davis</td>
+                            <td><span class="status-indicator open">Open (12 seats left)</span></td>
+                        </tr>
+                        <tr>
+                            <td>#EL-MUS02</td>
+                            <td>Acoustic Concert</td>
+                            <td>May 30, 2026</td>
+                            <td>Maestro Robert</td>
+                            <td><span class="status-indicator open">Open (50+ seats left)</span></td>
+                        </tr>
+                        <tr>
+                            <td>#EL-ART03</td>
+                            <td>Art Pottery Class</td>
+                            <td>June 02, 2026</td>
+                            <td>Artist Helena</td>
+                            <td><span class="status-indicator full">Registration Closed</span></td>
+                        </tr>
+                        <tr>
+                            <td>#EL-FOOD04</td>
+                            <td>Farmers Market</td>
+                            <td>June 05, 2026</td>
+                            <td>Organizer Team</td>
+                            <td><span class="status-indicator open">Open (Admission Free)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 4: Grid-based Registration Form (Task 5 & 8 outline highlights) -->
+        <section id="registration" class="section-card">
+            <h2 class="gradient-header">Online Enrollment Application</h2>
+            <p>Submit your candidate details. Focused input fields trigger a custom colored outline highlighting the active section (Task 8).</p>
+            
+            <form id="registrationForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Select Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="eventSelect">Select Event Branch:</label>
+                    <select id="eventSelect" required>
+                        <option value="" disabled selected>-- Select Event Branch --</option>
+                        <option value="tech">Coding Bootcamp ($25)</option>
+                        <option value="music">Acoustic Concert ($15)</option>
+                        <option value="art">Art Pottery Class ($20)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group form-column-full">
+                    <label for="comments">Additional Notes:</label>
+                    <textarea id="comments" rows="3" placeholder="Tell us if you have any accessibility requests..."></textarea>
+                </div>
+                
+                <div class="form-actions-row">
+                    <button type="button" class="secondary-btn" onclick="clearForm()">Reset Application</button>
+                    <button type="submit" class="primary-btn">Complete Booking</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Section 5: Multiple Columns Newspaper Bulletin (Task 9) -->
+        <section id="newsletter" class="section-card">
+            <h2 class="gradient-header">Neighborhood Announcement Bulletin</h2>
+            <p>Our monthly bulletin styled as a classic community newspaper layout using the CSS3 multi-column specifications.</p>
+            
+            <div class="news-container">
+                <h3 class="news-article-title">The City Council Gazette: Revitalizing Local Engagement</h3>
+                <!-- Newspaper Column Layout -->
+                <article class="newspaper-text">
+                    <p>
+                        In a historic effort to build stronger community ties, the City Council has officially funded our digital upgrade plans. Today's launch of the revamped Web Portal is only the first step in a sequence of upgrades. The municipal developers highlighted that incorporating high-performance semantic structure is key to making public resources accessible to all residents, irrespective of their device types.
+                    </p>
+                    <p>
+                        Our upcoming Weekend Charity Fun Run is projected to hit record registration volumes. Local businesses have graciously sponsored hydration stations and runner shirts. Proceeds will directly support the public library expansion project, helping fund new technology pods and specialized workshops for high school coding classes.
+                    </p>
+                    <p>
+                        Furthermore, the Gardening Club is holding its spring botanical showcase. Over thirty home gardeners will display their organic produce and rare flowers in the central plaza. Everyone is invited to attend the interactive workshops on composting and urban flower gardening.
+                    </p>
+                    <p>
+                        Through these combined programs in technology, fine arts, commerce, and environmental awareness, our neighborhoods are demonstrating remarkable unity. Be sure to register for these courses in advance to secure seat slots and promotional passes!
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 6: Box Model & Layout Sandbox: visibility: hidden vs display: none (Task 8) -->
+        <section id="sandbox" class="section-card">
+            <h2 class="gradient-header">Task 8 Laboratory: Hidden vs None Demonstration</h2>
+            <p>This interactive terminal lets you visually experience the fundamental layout difference between <code>visibility: hidden</code> and <code>display: none</code>.</p>
+            
+            <div class="comparison-sandbox">
+                
+                <!-- Sandbox A: visibility: hidden -->
+                <div class="sandbox-card">
+                    <h3>Visibility: Hidden</h3>
+                    <p class="explain-tag">Leaves the container space empty in the page flow (retains width/height).</p>
+                    
+                    <div class="sandbox-stage">
+                        <div class="sandbox-item">Item 1</div>
+                        <div class="sandbox-item target-hidden" id="visibleBox">Target Box</div>
+                        <div class="sandbox-item">Item 3</div>
+                    </div>
+                    
+                    <button type="button" class="secondary-btn" id="toggleVisibilityBtn">Toggle visibility: hidden</button>
+                </div>
+
+                <!-- Sandbox B: display: none -->
+                <div class="sandbox-card">
+                    <h3>Display: None</h3>
+                    <p class="explain-tag">Collapses the element completely, freeing up page layout space.</p>
+                    
+                    <div class="sandbox-stage">
+                        <div class="sandbox-item">Item 1</div>
+                        <div class="sandbox-item target-hidden" id="displayBox">Target Box</div>
+                        <div class="sandbox-item">Item 3</div>
+                    </div>
+                    
+                    <button type="button" class="secondary-btn" id="toggleDisplayBtn">Toggle display: none</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 7: Chrome DevTools and Lab Guidelines (Task 11) -->
+        <section id="dev-lab" class="section-card">
+            <h2 class="gradient-header">Task 11: Style Inspector Laboratory</h2>
+            <p>Review the testing parameters to verify your CSS3 integration values using standard browser developer tools:</p>
+            
+            <div class="dev-lab-box">
+                <div class="dev-lab-title"># dev-tools-checklist --inspect-stylesheet</div>
+                <p>1. Open Chrome's device toolbar by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> to inspect mobile viewport stacking under 768px.</p>
+                <p>2. Go to the Network panel and reload the page to confirm that the Google Fonts stylesheet and <code>styles.css</code> are loaded securely.</p>
+                <p>3. Right-click any <code>.eventCard</code> in the grid, select 'Inspect', and tweak the padding/margins in the Styles sidebar to see box model modifications instantly!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- Footer Section                             -->
+    <!-- ========================================== -->
+    <footer>
+        <div class="header-container" style="justify-content: center; flex-direction: column; gap: 10px;">
+            <p>&copy; 2026 City Council Administration. Advanced CSS3 Specifications Showcase.</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Responsive Grid Grid-System • Universal Resets • Typography Scale</p>
+        </div>
+    </footer>
+
+    <!-- Task 8 Comparison Script -->
+    <script src="script.js"></script>
+</body>
+</html>

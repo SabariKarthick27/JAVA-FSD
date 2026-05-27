@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & User Guide - CityLink Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .help-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #212529;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #495057;
+            margin-top: 30px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f1f3f5;
+            border-left: 4px solid #0d6efd;
+            border-radius: 0 4px 4px 0;
+        }
+        .faq-item h3 {
+            margin-top: 0;
+            color: #212529;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="help-container">
+        <!-- Anchor link returning to index.html -->
+        <a href="index.html" class="back-link">← Back to Main Portal</a>
+
+        <h1>CityLink Portal Help Center</h1>
+        <p class="lead">Welcome to the User Support and Frequently Asked Questions page. This external guide is designed to help neighborhood residents troubleshoot interactive widgets and use portal services efficiently.</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>1. Why is the Geolocation utility failing to load coordinates?</h3>
+            <p>The Geolocation API is highly secure and requires explicit user consent. When you click <strong>"Find Nearby Events"</strong>, your browser will prompt you with a permission request. If you decline, or if your connection times out, a validation error is displayed. Make sure you enable location services in your browser settings.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>2. How does the event pre-selection and preference saving work?</h3>
+            <p>Our portal tracks your preferred event selection using the HTML5 <strong>Web Storage API</strong>. When you select an event category in the registration card, your preference is immediately logged into your local browser's storage cache. If you accidentally refresh the page, the form automatically pre-selects that event. Clicking the <strong>"Clear Saved Preferences"</strong> button completely flushes these values from both <code>localStorage</code> and <code>sessionStorage</code>.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>3. How do I inspect form fields and validation errors?</h3>
+            <p>You can test form validation parameters using standard browser developer tools. Simply double-click any field or right-click and choose <strong>"Inspect"</strong>. The Name field is set with <code>autofocus</code>, and all fields are configured as <code>required</code>, ensuring native pop-ups guide you if critical information is missing.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>4. Can I see high-resolution copies of event graphics?</h3>
+            <p>Yes! In the event gallery table, you can <strong>double-click</strong> on any image thumbnail. This triggers a modal overlay enlarging the illustration so you can inspect event posters closely.</p>
+        </div>
+
+        <h2>Need Extra Help?</h2>
+        <p>If you encounter rendering issues or technical glitches, please contact the City Council Support Office or check out our active logs via the browser console.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="16" fill="url(#bg)" />
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="apple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f87171" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Apple Illustration -->
+  <path d="M 100,80 C 85,60 55,60 55,90 C 55,130 90,150 100,150 C 110,150 145,130 145,90 C 145,60 115,60 100,80 Z" fill="url(#apple)" />
+  
+  <!-- Apple Stem and Leaf -->
+  <path d="M 100,75 Q 105,50 115,45" fill="none" stroke="#d97706" stroke-width="5" stroke-linecap="round" />
+  <path d="M 104,65 C 104,65 125,60 120,75 C 115,75 104,65 104,65 Z" fill="#4ade80" />
+  
+  <circle cx="80" cy="95" r="5" fill="#fca5a5" />
+</svg>

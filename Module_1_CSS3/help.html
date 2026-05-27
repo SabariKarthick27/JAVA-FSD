@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center & Styles Guide - CityLink Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .help-wrapper {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .help-nav {
+            margin-bottom: 30px;
+        }
+        .help-nav a {
+            color: #818cf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .help-nav a:hover {
+            text-decoration: underline;
+        }
+        .faq-block {
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary);
+            padding-left: 20px;
+            background: rgba(255,255,255,0.02);
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+        }
+        .faq-block h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="help-wrapper">
+        <div class="help-nav">
+            <a href="index.html">← Back to Main Portal</a>
+        </div>
+
+        <section class="section-card">
+            <h1 class="gradient-header" style="font-size: 2.2rem; font-weight: 800;">CSS3 Solution Guide</h1>
+            <p>Welcome to the styling support center. This guide outlines how CSS3 variables, responsive media parameters, and alignment behaviors are resolved in this project.</p>
+
+            <div class="faq-block">
+                <h3>1. How do we test mobile screen responsiveness?</h3>
+                <p>The viewport layout automatically pivots under <code>768px</code>. Our media query re-orders navigation menus vertically, resizes typography scales, stacks columns into one, and stretches form containers. You can simulate mobile layouts by toggling the device option in Chrome DevTools.</p>
+            </div>
+
+            <div class="faq-block">
+                <h3>2. Where are CSS3 variables declared?</h3>
+                <p>Branding variables are declared in the root scope selector <code>:root</code> inside the external sheet <code>styles.css</code>. This allows clean, systematic editing of text colors, theme shadows, HSL values, and borders across all HTML pages.</p>
+            </div>
+
+            <div class="faq-block">
+                <h3>3. What is the layout difference between "hidden" and "none"?</h3>
+                <p>In our layout sandbox section on the homepage, clicking the visibility button toggles <code>visibility: hidden</code>. Notice that while the element disappears, it continues to take up physical container space. Clicking the display button toggles <code>display: none</code>, which collapses the element entirely so adjacent elements shift to fill the gap.</p>
+            </div>
+
+            <div class="faq-block">
+                <h3>4. Are the tables collapsed dynamically?</h3>
+                <p>Yes. The schedule table leverages <code>border-collapse: collapse;</code> alongside custom table padding, centered text aligns, and alternate-row zebra striping (`tr:nth-child(even)`), producing an exceptionally tidy layout.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

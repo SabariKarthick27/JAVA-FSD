@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Local Community Event Portal</title>
+    <!-- Task 1: Linked external stylesheet styles.css -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Task 3: Internal CSS for #welcomeBanner and .highlight -->
+    <style>
+        #welcomeBanner {
+            background-color: #0d6efd;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #welcomeBanner h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- Navigation Section                         -->
+    <!-- ========================================== -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo">CityLink Portal</h1>
+            <!-- Task 2: nav element with anchors to page sections and external help.html -->
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#geolocation">Location</a></li>
+                    <!-- Task 2: Link to external help document targeting a new tab -->
+                    <li><a href="help.html" target="_blank" class="help-btn">Help Guide ↗</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- Main Content Section                       -->
+    <!-- ========================================== -->
+    <main>
+        
+        <!-- Task 3: Welcome Message Banner for a logged-in user -->
+        <div id="welcomeBanner">
+            <h3>Welcome back, <span class="user-name">Resident Sabari Karthick</span>!</h3>
+            <p>You have access to exclusive community event updates today.</p>
+            <!-- Task 3: Inline style on a special offer span (red, bold) -->
+            <p>🔥 <span style="color: #ff3b30; font-weight: bold; text-decoration: underline;">Special Offer:</span> Register for any tech or art workshop in the next 24 hours and receive a free city parking pass!</p>
+        </div>
+
+        <!-- Section 1: Home/Intro -->
+        <section id="home">
+            <h2>Local Community Event Portal</h2>
+            <p>Welcome to your central hub for neighborhood activities, workshops, and sports matches organized by the <span class="highlight">City Council Office</span>. Our mission is to keep residents engaged, active, and connected.</p>
+            <p>Use this portal to view upcoming programs, secure your spot through our simple registration form, and locate nearest gathering spots using integrated geolocation services.</p>
+        </section>
+
+        <!-- Section 2: Events & Gallery -->
+        <section id="events">
+            <h2>Upcoming Community Events</h2>
+            <p>Inspect our curated events calendar. <span class="highlight">Double-click any event image</span> to enlarge it for full details!</p>
+            
+            <!-- Task 4: Image Gallery inside a table with 2 rows and 3 columns -->
+            <table class="event-gallery-table">
+                <caption>Weekly Event Grid Schedule</caption>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="gallery-card">
+                                <img src="assets/event1.svg" alt="Tech Bootcamp Illustration" title="Coding Bootcamp Workshop" class="gallery-img" id="img-tech">
+                                <span class="event-caption">1. Coding Bootcamp (Tech)</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="gallery-card">
+                                <img src="assets/event2.svg" alt="Acoustic Guitar Illustration" title="Community Acoustic Concert" class="gallery-img" id="img-concert">
+                                <span class="event-caption">2. Acoustic Concert (Music)</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="gallery-card">
+                                <img src="assets/event3.svg" alt="Art Palette Illustration" title="Creative Clay Pottery Class" class="gallery-img" id="img-art">
+                                <span class="event-caption">3. Pottery Class (Art & Craft)</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="gallery-card">
+                                <img src="assets/event4.svg" alt="Vegetable Basket Illustration" title="Local Organic Farmers Market" class="gallery-img" id="img-market">
+                                <span class="event-caption">4. Farmers Market (Food)</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="gallery-card">
+                                <img src="assets/event5.svg" alt="Potted Plant Illustration" title="Neighborhood Spring Flower Show" class="gallery-img" id="img-flower">
+                                <span class="event-caption">5. Gardening Club (Eco)</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="gallery-card">
+                                <img src="assets/event6.svg" alt="Running Shoe Illustration" title="Annual Charity Fun Run Marathon" class="gallery-img" id="img-sports">
+                                <span class="event-caption">6. Charity Fun Run (Sports)</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 3: Event Registration Form -->
+        <section id="register">
+            <h2>Secure Your Spot</h2>
+            <p>Fill out this form to register. Select your event to view the admission fee instantly.</p>
+            
+            <!-- Task 5: Event Registration Form styled with CSS -->
+            <form id="registrationForm" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="regName">Full Name:</label>
+                    <!-- Task 5: placeholder, required, and autofocus -->
+                    <input type="text" id="regName" name="name" placeholder="John Doe" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="regEmail">Email Address:</label>
+                    <input type="email" id="regEmail" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regDate">Preferred Date:</label>
+                    <input type="date" id="regDate" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regType">Event Category:</label>
+                    <!-- Task 6 & 8: Dropdown triggers onchange for fee display & saves to localStorage -->
+                    <select id="regType" name="eventType" required>
+                        <option value="" disabled selected>-- Select an Event --</option>
+                        <option value="tech">Coding Bootcamp (Fee: $25)</option>
+                        <option value="music">Acoustic Concert (Fee: $15)</option>
+                        <option value="art">Pottery Class (Fee: $20)</option>
+                        <option value="food">Farmers Market (Fee: Free)</option>
+                        <option value="gardening">Gardening Club (Fee: Free)</option>
+                        <option value="sports">Charity Fun Run (Fee: $10)</option>
+                    </select>
+                </div>
+                
+                <!-- Task 6: Displays selected event fee onchange of dropdown -->
+                <div class="fee-display-box" id="feeBox" style="display: none;">
+                    Estimated Admission Fee: <strong id="feeAmount">$0</strong>
+                </div>
+
+                <div class="form-group">
+                    <label for="regMessage">Additional Comments (Optional):</label>
+                    <textarea id="regMessage" name="message" rows="4" placeholder="Tell us if you have any accessibility requests or dietary needs..."></textarea>
+                </div>
+
+                <!-- Task 5: Displaying confirmation message using <output> when submitted -->
+                <div class="form-actions">
+                    <button type="submit" id="submitFormBtn">Submit Registration</button>
+                    <!-- Task 8: Clear preferences button -->
+                    <button type="button" id="clearPrefBtn" class="secondary-btn">Clear Saved Preferences</button>
+                </div>
+
+                <div class="output-container">
+                    <output id="confirmationMessage" for="regName regEmail regDate regType regMessage"></output>
+                </div>
+            </form>
+        </section>
+
+        <!-- Section 4: Live Feedback & Event Handling -->
+        <section id="feedback">
+            <h2>Resident Event Feedback</h2>
+            <p>Tell us about your experience in previous events. Your responses help us shape future planning.</p>
+            
+            <div class="feedback-card">
+                <div class="form-group">
+                    <label for="feedbackPhone">Contact Phone (for verification):</label>
+                    <!-- Task 6: onblur phone validation -->
+                    <input type="tel" id="feedbackPhone" placeholder="10-digit number (e.g. 9876543210)" required>
+                    <small id="phoneValidationMsg" class="validation-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedbackText">Feedback Description:</label>
+                    <!-- Task 6: capturing key events & counting characters -->
+                    <textarea id="feedbackText" rows="3" placeholder="Start typing feedback here..."></textarea>
+                    <div class="counter-box">
+                        Characters entered: <span id="charCount" class="char-count">0</span> / 500
+                    </div>
+                </div>
+
+                <button type="button" id="submitFeedbackBtn">Submit Comments</button>
+                <div id="feedbackOutput"></div>
+            </div>
+        </section>
+
+        <!-- Section 5: Video Invite -->
+        <section id="media">
+            <h2>Video Invitation: Welcome to the Neighborhood</h2>
+            <p>Watch our virtual walkthrough showcasing the highlights of last year's event gallery.</p>
+            
+            <!-- Task 7: video invite tag with source and controls -->
+            <div class="video-wrapper">
+                <video id="inviteVideo" controls width="100%" poster="assets/hero_banner.png">
+                    <source src="assets/invite_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Task 7: Message triggered oncanplay -->
+                <div id="videoStatusMessage" class="status-alert">Loading video components...</div>
+            </div>
+        </section>
+
+        <!-- Section 6: Geolocation Event Mapping -->
+        <section id="geolocation">
+            <h2>Find Nearby Venues</h2>
+            <p>Click below to discover city buildings and event parks closest to your current coordinates.</p>
+            
+            <!-- Task 9: Geolocation button and dynamic coordinates output -->
+            <div class="geolocation-box">
+                <button type="button" id="findLocationBtn">Find Nearby Events 📍</button>
+                
+                <div id="locationOutput" class="location-results" style="display: none;">
+                    <p><strong>Your Location Data:</strong></p>
+                    <ul>
+                        <li>Latitude: <span id="geoLat">Pending...</span></li>
+                        <li>Longitude: <span id="geoLong">Pending...</span></li>
+                        <li>Accuracy: <span id="geoAccuracy">Pending...</span></li>
+                        <li>Timestamp: <span id="geoTime">Pending...</span></li>
+                    </ul>
+                    <div id="mapHint" class="highlight">Success! Coordinates retrieved using high-accuracy tracking.</div>
+                </div>
+                <div id="locationError" class="location-error" style="display: none;"></div>
+            </div>
+        </section>
+
+        <!-- Section 7: Chrome DevTools Debugging Lab Guide (Task 10) -->
+        <section id="debugging-guide">
+            <h2>Task 10: Chrome DevTools Debugging Guide</h2>
+            <p>As part of our college exercise guidelines, we've simulated logging outputs to inspect in the Chrome developer shell. Follow these steps to verify your implementation:</p>
+            <ol class="debug-list">
+                <li>Press <kbd>F12</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> (Windows) to open the **Chrome DevTools panel**.</li>
+                <li>Go to the **Elements** tab to inspect the semantic HTML5 layout tags (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>) and review this page's DOM tree.</li>
+                <li>Go to the **Console** tab to view custom interactive logs generated as you fill out the registration form, test Geolocation, or load the video player.</li>
+                <li>Add JavaScript breakpoints in the browser DevTools by opening `script.js` in the **Sources** tab and clicking the line numbers inside the Geolocation function or form submission listener, then watch variable states live!</li>
+            </ol>
+            <div class="console-box-demo">
+                <strong>Console Logging Status:</strong> <span class="badge active">ENABLED</span>
+                <p>Open your browser console to see live debugging metrics tracked in real-time!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- Footer Section                             -->
+    <!-- ========================================== -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 City Council Administration. Day 1 Web Development Laboratory assignment.</p>
+            <p>Prepared by Student Group. Semantic HTML5 Specifications Validated.</p>
+        </div>
+    </footer>
+
+    <!-- Image Enlarge Modal Overlay (Task 6 - ondblclick) -->
+    <div id="imageModal" class="modal-overlay">
+        <span class="close-modal" id="closeModalBtn">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content-img" id="modalImg" alt="Enlarged gallery view">
+            <div id="modalCaption" class="modal-caption-text"></div>
+        </div>
+    </div>
+
+    <!-- Task 6 & 7: Linked external script file -->
+    <script src="script.js"></script>
+</body>
+</html>
